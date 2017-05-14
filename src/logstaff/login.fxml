@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="260.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="logstaff.LoginController">
+  <children>
+      <Label fx:id="btnExit" layoutX="220.0" layoutY="6.0" onMouseClicked="#quitApp" text="Quit" />
+      <ImageView disable="true" fitHeight="48.0" fitWidth="141.0" layoutX="72.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" smooth="true">
+         <image>
+            <Image url="@../images/Logo.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="45.0" layoutY="87.0" text="User Name:" AnchorPane.leftAnchor="10.0" />
+      <TextField fx:id="usrId" layoutX="10.0" layoutY="106.0" onKeyReleased="#onEnter" prefHeight="25.0" prefWidth="208.0" promptText="michalsmith" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="50.0" />
+      <Label layoutX="45.0" layoutY="150.0" prefHeight="25.0" prefWidth="76.0" text="Password:" AnchorPane.leftAnchor="10.0" />
+      <PasswordField fx:id="usrPwd" layoutX="10.0" layoutY="173.0" onKeyReleased="#onEnter" prefHeight="25.0" prefWidth="208.0" promptText="password" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="50.0" />
+      <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="245.0" onAction="#loginMe" prefWidth="100.0" text="Sign In" />
+      <Hyperlink id="forgot-pass" focusTraversable="false" layoutX="68.0" layoutY="289.0" onAction="#forgetPsw" text="Forgot Your Password" AnchorPane.leftAnchor="68.0" />
+      <Label fx:id="errMsg" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="18.0" layoutY="215.0" prefHeight="17.0" prefWidth="219.0"  textAlignment="CENTER" />
+      <Label fx:id="copywrite" layoutX="16.0" layoutY="378.0" prefHeight="17.0" prefWidth="230.0" text="© All rights reserved   www.hansoftz.com" />
+   </children>
+  <stylesheets>
+    <URL value="@Login.css" />
+  </stylesheets>
+</AnchorPane>

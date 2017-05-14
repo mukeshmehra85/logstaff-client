@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+
+<AnchorPane id="Profile" maxHeight="400" maxWidth="260" minHeight="400" minWidth="260" prefHeight="400.0" prefWidth="260.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logstaff.ProfileController">
+<children>
+      <ImageView fitHeight="36.0" fitWidth="260.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/BG.jpg" />
+         </image>
+      </ImageView>
+       <ImageView disable="true" fitHeight="34.0" fitWidth="112.0" layoutX="110.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../images/Logo.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="profilePic" cache="true" disable="true" fitHeight="36.0" fitWidth="37.0" layoutX="2.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" smooth="true" AnchorPane.leftAnchor="2.0">
+              
+      </ImageView>
+     
+      <ToggleButton fx:id="toggle" layoutX="200.0" layoutY="42.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#toggleTimer" prefHeight="27.0" prefWidth="50.0" text="ON" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" />
+      <Label fx:id="timeLbl" focusTraversable="false" graphicTextGap="8.0" layoutX="61.0" layoutY="39.0" minHeight="35" prefHeight="35.0" prefWidth="134.0" text="00:00:00">
+      </Label>
+      <Label fx:id="crtProj" focusTraversable="false" layoutX="6.0" layoutY="77.0" prefHeight="17.0" prefWidth="248.0" text="">
+        
+      </Label>
+      <Label fx:id="totTime" focusTraversable="false" graphicTextGap="8.0" layoutX="127.0" layoutY="93.0" prefHeight="27.0" prefWidth="89.0">
+      </Label>
+      <Label layoutX="5.0" layoutY="92.0" prefHeight="27.0" prefWidth="134.0" text="Total time for today:">
+      </Label>
+      <Separator focusTraversable="false" layoutY="117.0" prefHeight="3.0" prefWidth="260.0" />
+      <ComboBox fx:id="orgsComb" focusTraversable="false" layoutX="1.0" layoutY="121.0" visibleRowCount="5" />
+      <ListView fx:id="projList" layoutX="2.0" layoutY="146.0" prefHeight="233.0" prefWidth="248.0" AnchorPane.bottomAnchor="34.0" AnchorPane.topAnchor="146.0" />
+    
+      <Group fx:id="notesDlg" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000e5" height="132.0" layoutY="36.0" stroke="TRANSPARENT" strokeType="INSIDE" width="260.0" />
+            <TextArea fx:id="notesTxt" layoutX="6.0" layoutY="44.0" prefHeight="113.0" prefWidth="247.0" wrapText="true" />
+         </children>
+      </Group>
+     
+      <Button fx:id="addNoteBtn" layoutX="196.0" layoutY="8.0" onAction="#addNote" style="-fx-background-color: transparent;-fx-cursor:hand" AnchorPane.rightAnchor="32.0">
+         <graphic>
+            <ImageView fitHeight="16" fitWidth="16" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/notepad.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      
+      </Button>
+    
+     <Button fx:id="notesDone" layoutX="196.0" layoutY="8.0" onAction="#closeNote" style="-fx-background-color: transparent;-fx-cursor:hand" AnchorPane.rightAnchor="32.0">
+         <graphic>
+            <ImageView fitHeight="16" fitWidth="16" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/close.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      
+      <Button fx:id="btnExit" layoutX="226.0" layoutY="7.0" onMouseClicked="#quitApp" style="-fx-background-color: transparent;-fx-cursor:hand" AnchorPane.rightAnchor="3.0">
+        <graphic>
+          <ImageView fitHeight="16" fitWidth="16" pickOnBounds="true" preserveRatio="true">
+            <image>
+              <Image url="@../images/logOut.png" />
+            </image>
+          </ImageView>
+        </graphic>
+      </Button>
+      <Circle fx:id="netStatus" fill="Green" layoutX="50.0" layoutY="57.0" radius="5.0" />
+      <Group fx:id="blank_mc">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#3b3e40" height="400.0" strokeWidth="0.0" width="260.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="174.0" text="Saving Data..." textFill="WHITE"> </Label>
+         </children>
+      </Group>
+      <Label fx:id="copywrite" layoutX="16.0" layoutY="378.0" prefHeight="17.0" prefWidth="230.0" text="© All rights reserved   www.hansoftz.com" />
+  </children>
+  <stylesheets>
+    <URL value="@profile.css" />
+  </stylesheets>
+</AnchorPane>

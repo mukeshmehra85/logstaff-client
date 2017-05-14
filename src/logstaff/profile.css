@@ -1,0 +1,75 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 16, 2014, 12:43:17 PM
+    Author     : Mukesh
+*/
+
+.root { 
+        -fx-focus-color: #ffffff; 
+      
+}
+
+.separator *.line { 
+-fx-border-style: solid;
+-fx-border-width: 1px;
+}
+
+#AnchorPane {
+    -fx-focus-color:#ffffff;
+    -fx-font: bold 12px "arial";
+}
+
+#AnchorPane:focused{
+     -fx-focus-traversable: false;
+}
+
+
+#orgsComb:focused{
+     -fx-focus-color: #1a4b85;
+}
+
+
+#orgsComb{-fx-focus-color: #ffffff;}
+
+#projList{-fx-focus-color: #ffffff;}
+
+#crtProj{-fx-text-fill:#1a4b85;}
+#totTime{-fx-text-fill:#1a4b85;}
+
+#addNote{
+    -fx-focus-color: #ffffff;
+}
+
+#timeLbl{
+    -fx-text-fill: black;
+}
+
+#toggle{
+    -fx-background-color: #1a4b85;
+    -fx-font: bold 15px "arial"  ; 
+    -fx-text-fill:#ffffff;
+    -fx-border-radius: 5 5 5 5;
+    -fx-background-radius: 5 5 5 5;
+    -fx-cursor:hand;
+}
+
+#toggle:disabled{
+     -fx-text-fill:#ffffff;
+     
+}
+
+#toggle:selected{
+    -fx-cursor:hand;
+    -fx-background-color:#ff6548;
+    -fx-text-fill:#ffffff;
+}
+
+#blank_mc Label{
+    -fx-font: bold 25px "arial"  ; 
+    -fx-text-fill:#ffffff;
+    -fx-effect: dropshadow( one-pass-box , rgba(255,255,255,0.5) , 0, 0.0 , 0 , 1);
+}
